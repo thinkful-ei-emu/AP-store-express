@@ -95,18 +95,9 @@ app.post("/register", (req, res) => {
 
   users.push(newUser);
 
-  res.send("All validation passed");
-
-  res
-  .status(204)
-  .end();
-
-  
+  res.status(200).send("All validation passed");
+ 
 });
-
-// app.get('/register', (req, res)=>{
-//     res.status(200).json(req.body)
-// })
 
 app.delete('/user/:userId', (req, res) => {
     const {userId} = req.params;
